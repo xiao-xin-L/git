@@ -18,3 +18,5 @@ var id = document.querySelector("#container")
 var cla = document.querySelectorAll(".content")
 var body = document.body
 var html = document.documentElement
+var head = document.head
+var title = document.title
