@@ -16,3 +16,5 @@ var tag = document.getElementsByTagName("div")
 var input = document.getElementsByName("text")
 var id = document.querySelector("#container")
 var cla = document.querySelectorAll(".content")
+var body = document.body
+var html = document.documentElement
