@@ -20,3 +20,6 @@ var body = document.body
 var html = document.documentElement
 var head = document.head
 var title = document.title
+
+div.innerHTML = "<p>大帅比<p>"
+d.innerText = "<span>小帅比<span>"
