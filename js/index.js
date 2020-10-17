@@ -1,13 +1,13 @@
-var a = 1
-for(;a<10;){
-    a++
-    console.log(a)
-}
-var obj = {
-    "name": "xiaoxin",
-    "age": 18,
-    "sex": "男"
-}
+// var a = 1
+// for(;a<10;){
+//     a++
+//     console.log(a)
+// }
+// var obj = {
+//     "name": "xiaoxin",
+//     "age": 18,
+//     "sex": "男"
+// }
 
 // var arr = ["xioaoxin",18,"男"]
 // var div = document.getElementById("container")
@@ -49,18 +49,31 @@ var obj = {
 // }
 // html.onmousemove = onmousemove
 
-let btn = document.querySelectorAll("input")
-let div = document.querySelector("div")
+// let btn = document.querySelectorAll("input")
+// let div = document.querySelector("div")
 
-function btn1(){
-    div.style.backgroundColor = "red";
+// function btn1(){
+//     div.style.backgroundColor = "red";
+// }
+// function btn2(){
+//     div.style.backgroundColor = "green";
+// }
+// function btn3(){
+//     div.style.backgroundColor = "yellow";
+// }
+// btn[0].onclick = btn1
+// btn[1].onclick = btn2
+// btn[2].onclick = btn3
+
+
+var a = 1;
+// for (var i = 0;i<a;i++){
+//     console.log(i)
+// }
+while (true) {
+    a += 1;
+    console.log(a);
+    if (a > 11) {
+        break
+    }
 }
-function btn2(){
-    div.style.backgroundColor = "green";
-}
-function btn3(){
-    div.style.backgroundColor = "yellow";
-}
-btn[0].onclick = btn1
-btn[1].onclick = btn2
-btn[2].onclick = btn3
