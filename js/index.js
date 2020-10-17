@@ -22,16 +22,45 @@ var obj = {
 // var title = document.title
 
 // var input = document.querySelector("input")
-var input = document.querySelector("input")
+// var input = document.querySelector("input")
 
 // div.innerHTML = "<p>大帅比<p>"
 // d.innerText = "<span>小帅比<span>"
 
-console.log(input.getAttribute("id"))
-console.log(input.setAttribute("new-name","xiaoxin"))
+// console.log(input.getAttribute("id"))
+// console.log(input.setAttribute("new-name","xiaoxin"))
+// var html = document.documentElement
 
+// // function onclick(){
+// //     alert("哈哈哈")
+// // }
+// // input.onclick = onclick
+// function ondblclick(){
+//     confirm("你确定吗?")
+// }
+// input.ondblclick = ondblclick
 
-function onclick(){
-    alert("哈哈哈")
+// function onmouseenter(){
+//     prompt("请输入姓名:")
+// }
+// input.onmouseenter = onmouseenter
+// function onmousemove(){
+//     console.log("你好世界")
+// }
+// html.onmousemove = onmousemove
+
+let btn = document.querySelectorAll("input")
+let div = document.querySelector("div")
+
+function btn1(){
+    div.style.backgroundColor = "red";
 }
-input.onclick = onclick
+function btn2(){
+    div.style.backgroundColor = "green";
+}
+function btn3(){
+    div.style.backgroundColor = "yellow";
+}
+btn[0].onclick = btn1
+btn[1].onclick = btn2
+btn[2].onclick = btn3
