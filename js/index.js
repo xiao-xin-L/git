@@ -84,53 +84,137 @@ while (true) {
 //     }
 // }
 
-语句1
-if(判断条件){
-    语句2
-}else{
-    语句3
-}
-语句4
+// 语句1
+// if (判断条件) {
+//     语句2
+// } else {
+//     语句3
+// }
+// 语句4
 
-语句1
-if (判断条件) {
-    语句2
-}
-语句3
+// 语句1
+// if (判断条件) {
+//     语句2
+// }
+// 语句3
 
-语句1
-if(判断条件){
-    语句2
-}
-if(判断条件){
-    语句3
-}
-语句4
+// 语句1
+// if (判断条件) {
+//     语句2
+// }
+// if (判断条件) {
+//     语句3
+// }
+// 语句4
 
-语句1
-if(判断条件){
-    语句2
-}else if(判断条件){
-    语句3
-}else{
-    语句4
-}
-语句5
+// 语句1
+// if (判断条件) {
+//     语句2
+// } else if (判断条件) {
+//     语句3
+// } else {
+//     语句4
+// }
+// 语句5
 
-语句1
-for(初始值;判断条件;语句2){
-    语句3
-}
-语句4
+// 语句1
+// for (初始值; 判断条件; 语句2) {
+//     语句3
+// }
+// 语句4
 
-语句1
-while(判断条件){
-    语句2
-}
-语句3
+// 语句1
+// while (判断条件) {
+//     语句2
+// }
+// 语句3
 
-语句1
-do{
-    语句2
-}while(判断条件)
-语句3
+// 语句1
+// do {
+//     语句2
+// } while (判断条件)
+// 语句3
+
+// var a = 100;
+// for (var i = 0; i < a; i++) {
+//     console.log(i)
+// }
+
+
+// var content = document.querySelector(".content")
+
+// for(var i = 0;i<=9;i++){
+//     for(var j = 0;j<=i;j++){
+//         content.innerHTML = j + "x" + i + "=" + j*i + "<br>"
+//     }
+// }
+// var x = 10;
+// switch (x) {
+//     case 1:
+//         console.log(x);
+//         break;
+//     case 2:
+//         console.log(x);
+//         break;
+//     case 3:
+//         console.log(x);
+//         break;
+//     case 4:
+//         console.log(x);
+//         break;
+//     case 5:
+//         console.log(x);
+//         break;
+//     default:
+//         console.log(10);
+// }
+// arr = [1,2,3,45,6,78,9,10]
+// for (var i in arr){
+//     console.log(arr[i])
+// }
+
+var obj = {
+    name: "xiaoxin",
+    age: 18,
+    sex: "nan",
+}
+var arr = [1, 2, 546, 24, 8, 1, 56, 13, 5, 46, 4, 6, 631, 3, 4];
+var a = [];
+var b = 0;
+
+for (var i = 0; i < 15; i++) {
+    a = arr[i + 1];
+    if (b === arr[i]) {
+        console.log("hello world");
+    } else if (b === arr[i + 1]) {
+        console.log("nihao shijie");
+        while (true) {
+            switch (b) {
+                case 0:
+                case 1:
+                case 2:
+                    console.log("halou");
+                    break;
+                case 5:
+                    console.log("exit");
+                    break;
+                default:
+                    console.log("morenzhi");
+                    break
+            }
+            for (var j = 0; j < b; j++) {
+                b = arr[i + 5];
+                console.log(b);
+                if (b === arr[i + 9]) {
+                    console.log(b);
+                } else {
+                    for (var k = 0; k < 20; k++) {
+                        for (var n in arr) {
+                            console.log(arr[n]);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
