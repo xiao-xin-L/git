@@ -1,0 +1,75 @@
+body,ul,p{
+    margin: 0;
+}
+ul{
+    padding-left: 0;
+    list-style: none;
+}
+.container{
+    position: relative;
+    width: 500px;
+    height: 333px;
+    margin: 100px auto 0;
+    /* background-color: blueviolet; */
+}
+.container>ul>li{
+    display: none;
+    position: absolute;
+}
+.container>ul>li:first-child{
+    display: block;
+}
+.container>ul>li>p:first-child{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+}
+.container>ul>li>p:last-child{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+}
+.container>.left-btn{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.container>.right-btn{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.button-two{
+    position: relative;
+    width: 600px;
+    height: 30px;
+    margin: 10px auto 0;
+    text-align: center;
+    /* background-color: blue; */
+}
+.button-two>.normal-module{
+    border: none;
+    cursor: pointer;
+}
+.button-two>.cycle-module{
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- <div class="dome">
+        <input type="text" class="in1">
+        <input type="text" class="in2">
+    </div> -->
+
+    <script>
+        // 工厂模式
+        // function createPerson(name, age, sex, company) {
+        //     let obj = new Object();
+        //     obj.name = name;
+        //     obj.age = age;
+        //     obj.sex = sex;
+        //     obj.company = company;
+        //     obj.personFunc = function (name1, age1, sex1, company1) {
+        //         let obj = new Object();
+        //         obj.name1 = name1;
+        //         obj.age1 = age1;
+        //         obj.sex1 = sex1;
+        //         obj.company1 = company1;
+        //         obj.personFunc1 = function () {
+        //             console.log(obj.name, obj.age, obj.sex, obj.company);
+        //             console.log(obj.name1, obj.age1, obj.sex1, obj.company1);
+        //         }
+        //         return obj;
+        //     }
+        //     return obj;
+        // }
+        // let newCreate = createPerson("xiaoxin", 18, "nan", "kemao");
+
+        // // 构造函数模式
+        // function Person(name, age, sex, company) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.sex = sex;
+        //     this.company = company;
+        //     this.person = function (name1, age1, sex1, company1) {
+        //         this.name1 = name1;
+        //         this.age1 = age1;
+        //         this.sex1 = sex1;
+        //         this.company1 = company1;
+        //         this.per = function () {
+        //             console.log(this.name, this.age, this.sex, this.company);
+        //             console.log(this.name1, this.age1, this.sex1, this.company1);
+        //         }
+        //     }
+        // }
+        // let newPerson = new Person("xiaoxin", 18, "nan", "kenmao");
+
+        // // 原型模式
+        // function Func(name, age, sex, company) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.sex = sex;
+        //     this.company = company;
+        // }
+        // // Func.prototype.newA=function(){
+        // //     console.log(this.name);
+        // // }
+        // // Func.prototype.newB=function(){
+        // //     console.log(this.age);
+        // // }
+        // // Func.prototype.newC=function(){
+        // //     console.log(this.sex);
+        // // }
+        // // Func.prototype.newD=function(){
+        // //     console.log(this.company);
+        // // }
+        // // Func.prototype.newF="dashuaibi";
+        // Func.prototype = {
+        //     constructor: Func,
+        //     newA: function () {
+        //         console.log(this.name);
+        //     },
+        //     newB: function () {
+        //         console.log(this.age);
+        //     },
+        //     newC: function () {
+        //         console.log(this.sex);
+        //     },
+        //     newD: function () {
+        //         console.log(this.company);
+        //     },
+        //     newF: "dashuaibi",
+        // }
+        // // 问题: 为什么给constructor设置特性为false,还是能修改,遍历?
+        // Object.defineProperty(Func.prototype, "constructor", {
+        //     configurable: false,
+        //     enumerable: false,
+        //     writable: false,
+        //     value: Func
+        // })
+        // let newFunc = new Func("xiaoxin", 18, "nan", "kemao");
+        // let newFunc2 = new Func("xiaoxin", 18, "nan", "kemao");
+
+        // // 原型模式的动态性问题
+
+        // function Perplex(name, age, company) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.company = company;
+        // }
+
+        // let xiao = new Perplex("xiao", 18, "kemao");
+
+        // Perplex.prototype.newA = function () {
+        //     console.log(this.name);
+        // }
+
+        // let xin = new Perplex("xin", 18, "maoke");
+
+        // //动态原型模式
+
+        // function English(name, age, company) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.company = company;
+        //     if (typeof this.sayName !== "function") {
+        //         English.prototype = {
+        //             sayName: function () {
+        //                 console.log(this.name);
+        //             }
+        //         }
+        //     };
+        // };
+        // let b = new English("环绕的", 18, "水电费sea");
+        // let c = new English("环绕的", 18, "水电费sea");
+        // let a = new English("沙发上的", 18, "古诗");
+
+        // 寄生构造函数模式
+        // function Person(name, age) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.sayName = function () {
+        //         console.log(this.name);
+        //     }
+        //     this.sayAge = function () {
+        //         console.log(this.age);
+        //     }
+        //     let o = new Object();
+        //     o.name = name;
+        //     o.age = age;
+        //     o.sayName = function () {
+        //         console.log(o.name);
+        //     }
+        //     o.sayAge = function () {
+        //         console.log(o.age);
+        //     }
+        //     return o
+        // }
+        // let per = new Person("xiaoxin", 18);
+
+
+        // 稳妥构造函数模式
+        // function Person(name,age){
+        //     let a=new Array();
+        //     a.name=name;
+        //     a.age=age;
+        //     a.sayName=function(){
+        //         console.log(name);
+        //     }
+        //     a.sayAge=function(){
+        //         console.log(age);
+        //     }
+        //     return a;
+        // }
+        // let per = Person("xiaoxin",18);
+
+        // call  apply  bind
+        function Person(name) {
+            this.name = name;
+            this.age = 18;
+        }
+        Person.prototype.sayName = function (num1, num2) {
+            console.log(this.name + "是大帅比" + num1 + num2);
+        }
+        let xiaoxin = new Person();
+        let o = {
+            name: "xiaoxin"
+        };
+        // Person.prototype.sayName.call(o);
+
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        function Food(name, price) {
+            Product.call(this, name, price);
+            this.category = 'food';
+        }
+
+        function Toy(name, price) {
+            Product.call(this, name, price);
+            this.category = 'toy';
+        }
+
+        var cheese = new Food('feta', 5);
+        var fun = new Toy('robot', 40);
+
+        // 工厂模式
+        // 构造函数模式
+        // 寄生构造函数模式
+        // 稳妥构造函数模式
+        // 原型模式
+        // 原型和构造函数的组合模式
+        // 动态原型模式
+
+
+        // 组合继承
+        function Supertype(name){
+            this.name=name;
+            this.color = ["red", "blue", "green"];
+        }
+        Supertype.prototype.sayName=function(){
+            console.log(this.name);
+        }
+        function Subtype(age){
+            this.age=age;
+        }
+        Subtype.prototype=new Supertype();
+        // Subtype.prototype.constructor=Subtype;
+        Subtype.prototype.sayAge=function(){
+            console.log(this.age);
+        }
+        let sub=new Subtype();
+
+
+
+        var name = "this window";
+        var obj={
+            name:"this object",
+            func:function () {
+                let that=this;
+                return function () {
+                    console.log(that.name);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
